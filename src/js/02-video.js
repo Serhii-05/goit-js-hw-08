@@ -3,22 +3,14 @@ import throttle from 'lodash.throttle';
 
 const KEY = 'videoplayer-current-time';
 
+
 const player = new Player('vimeo-player');
    
-
-    // player.on('play', function() {
-    //     console.log('played the video!');
-    // });
-
-    
-
 const key = localStorage.getItem(KEY);
 
 if (key) {
   player.setCurrentTime(parseFloat(key));
 }
-
-
 
 player.on(
   'timeupdate',
